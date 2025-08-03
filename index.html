@@ -17,6 +17,9 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .navbar {
@@ -47,16 +50,16 @@
     }
 
     .container {
+      flex-grow: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: calc(100vh - 72px); /* full height minus navbar */
-      text-align: center;
     }
 
-    img.logo {
-      max-width: 95%;
-      width: 788px;
+    .top-logo {
+      width: 500px;
+      max-width: 90%;
+      height: auto;
     }
   </style>
 </head>
@@ -66,4 +69,13 @@
     <a href="index.html" class="nav-button">HOME</a>
     <a href="about.html" class="nav-button">ABOUT</a>
     <a href="services.html" class="nav-button">SERVICES</a>
-    <a href="q
+    <a href="quote.html" class="nav-button">REQUEST A QUOTE</a>
+    <a href="contact.html" class="nav-button">CONTACT</a>
+  </div>
+
+  <div class="container">
+    <img class="top-logo" src="logo_transparent_7_13.png" alt="ENMR Logistics Logo">
+  </div>
+
+</body>
+</html>
