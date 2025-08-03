@@ -23,6 +23,171 @@
     <option value="Ground">Ground</option>
     <option value="Not sure">Not sure</option>
   </select>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request a Quote | ENMR Logistics</title>
+  <style>
+    :root {
+      --brand-brown: #4c3a14;
+      --button-brown: #5c3d17;
+      --button-hover: #77532a;
+    }
+
+    body {
+      background-color: var(--brand-brown);
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: var(--brand-brown);
+      padding: 16px 0;
+      border-bottom: 2px solid black;
+    }
+
+    .nav-button {
+      background-color: var(--button-brown);
+      color: white;
+      border: 2px solid black;
+      padding: 10px 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-size: 14px;
+      display: inline-block;
+      letter-spacing: 1px;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-button:hover {
+      background-color: var(--button-hover);
+      cursor: pointer;
+    }
+
+    .logo-wrapper {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    .top-logo {
+      width: 462px;
+      max-width: 90%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-top: 6px;
+      margin-bottom: 2px;
+      font-weight: bold;
+      text-align: left;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    input, textarea, select {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid black;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: var(--button-brown);
+      color: white;
+      font-weight: bold;
+      border: 2px solid black;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html" class="nav-button">HOME</a>
+    <a href="about.html" class="nav-button">ABOUT</a>
+    <a href="services.html" class="nav-button">SERVICES</a>
+    <a href="quote.html" class="nav-button">REQUEST A QUOTE</a>
+    <a href="contact.html" class="nav-button">CONTACT</a>
+  </div>
+
+  <div class="logo-wrapper">
+    <img class="top-logo" src="logo_transparent_7_13.png" alt="ENMR Logo">
+  </div>
+
+  <div class="container">
+    <h1>Request a Quote</h1>
+    <form action="https://formsubmit.co/support@enmrlogistics.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_autoresponse" value="Thank you for your submission. We'll respond shortly.">
+      
+      <label for="name">Name or Company</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="origin">Origin (City, Country)</label>
+      <input type="text" id="origin" name="origin" required />
+
+      <label for="destination">Destination (City, Country)</label>
+      <input type="text" id="destination" name="destination" required />
+
+      <label for="mode">Preferred Mode</label>
+      <select id="mode" name="mode">
+        <option value="">Select</option>
+        <option value="Ocean">Ocean</option>
+        <option value="Air">Air</option>
+        <option value="Ground">Ground</option>
+        <option value="Not sure">Not sure</option>
+      </select>
+
+      <label for="goods">Type of Goods</label>
+      <input type="text" id="goods" name="goods" />
+
+      <label for="details">Additional Details</label>
+      <textarea id="details" name="details" rows="4" placeholder="Tell us anything else we should know about your shipment."></textarea>
+
+      <button type="submit">Submit Quote Request</button>
+    </form>
+  </div>
+
+</body>
+</html>
 
   <label for="goods">Type of Goods</label>
   <input type="text" id="goods" name="goods" />
