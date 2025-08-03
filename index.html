@@ -17,14 +17,13 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
-    /* NAVIGATION BAR */
     .navbar {
       background-color: var(--brand-brown);
       padding: 16px 0;
       border-bottom: 2px solid black;
+      text-align: center;
     }
 
     .nav-button {
@@ -47,80 +46,24 @@
       cursor: pointer;
     }
 
-    /* PAGE CONTENT */
     .container {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      height: calc(100vh - 72px); /* full height minus navbar */
+      text-align: center;
     }
 
     img.logo {
-      width: 788px;
       max-width: 95%;
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      font-size: 1.33rem;
-      margin: 0 20px 10px;
-    }
-
-    h2 {
-      font-size: 2.66rem;
-      margin-bottom: 30px;
-    }
-
-    p {
-      font-size: 1rem;
-      margin: 10px 20px;
-      max-width: 600px;
-    }
-
-    .contact {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
-    a {
-      color: white;
-      text-decoration: underline;
+      width: 788px;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
   <div class="navbar">
     <a href="index.html" class="nav-button">HOME</a>
     <a href="about.html" class="nav-button">ABOUT</a>
     <a href="services.html" class="nav-button">SERVICES</a>
-    <a href="quote.html" class="nav-button">REQUEST A QUOTE</a>
-    <a href="contact.html" class="nav-button">CONTACT</a>
-  </div>
-
-  <!-- MAIN PAGE CONTENT -->
-  <div class="container">
-    <img class="logo" src="logo_transparent_7_13.png" alt="ENMR Logistics Logo" />
-
-    <h2>Our website is launching soon.</h2>
-
-    <h1>ENMR Logistics LLC</h1>
-    <p>International & Domestic Logistics Coordination Solutions</p>
-    <p>
-      ENMR Logistics is a Florida-based logistics services provider specializing in dependable, tailored coordination of global and domestic freight — including air, ocean, and ground transport.
-      We work closely with licensed freight forwarders, customs brokers, and carriers to ensure your shipments move smoothly, while you stay in control.
-    </p>
-    <div class="contact">
-      📍 Sarasota, Florida  
-      <br />
-      📧 Email: <a href="mailto:support@enmrlogistics.com">support@enmrlogistics.com</a>
-      <br />
-      🌐 www.enmrlogistics.com
-    </div>
-  </div>
-
-</body>
-</html>
+    <a href="q
