@@ -3,51 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ENMR Logistics | Coming Soon</title>
+  <title>ENMR Logistics | Home</title>
   <style>
     :root {
       --brand-brown: #4c3a14;
+      --button-brown: #5c3d17;
+      --button-hover: #77532a;
     }
+
     body {
       background-color: var(--brand-brown);
       color: white;
       font-family: Arial, sans-serif;
       margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 0;
       text-align: center;
     }
+
+    /* NAVIGATION BAR */
+    .navbar {
+      background-color: var(--brand-brown);
+      padding: 16px 0;
+      border-bottom: 2px solid black;
+    }
+
+    .nav-button {
+      background-color: var(--button-brown);
+      color: white;
+      border: 2px solid black;
+      padding: 10px 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-size: 14px;
+      display: inline-block;
+      letter-spacing: 1px;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-button:hover {
+      background-color: var(--button-hover);
+      cursor: pointer;
+    }
+
+    /* PAGE CONTENT */
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       max-width: 800px;
-      padding: 20px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
+
     img.logo {
       width: 788px;
       max-width: 95%;
       margin-bottom: 40px;
     }
+
     h1 {
       font-size: 1.33rem;
       margin: 0 20px 10px;
     }
+
     h2 {
       font-size: 2.66rem;
       margin-bottom: 30px;
     }
+
     p {
       font-size: 1rem;
       margin: 10px 20px;
       max-width: 600px;
     }
+
     .contact {
       margin-top: 20px;
       font-weight: bold;
     }
+
     a {
       color: white;
       text-decoration: underline;
@@ -55,11 +91,22 @@
   </style>
 </head>
 <body>
+
+  <!-- NAVIGATION BAR -->
+  <div class="navbar">
+    <a href="index.html" class="nav-button">HOME</a>
+    <a href="about.html" class="nav-button">ABOUT</a>
+    <a href="services.html" class="nav-button">SERVICES</a>
+    <a href="quote.html" class="nav-button">REQUEST A QUOTE</a>
+    <a href="contact.html" class="nav-button">CONTACT</a>
+  </div>
+
+  <!-- MAIN PAGE CONTENT -->
   <div class="container">
     <img class="logo" src="logo_transparent_7_13.png" alt="ENMR Logistics Logo" />
-    
+
     <h2>Our website is launching soon.</h2>
-    
+
     <h1>ENMR Logistics LLC</h1>
     <p>International & Domestic Logistics Coordination Solutions</p>
     <p>
@@ -74,5 +121,6 @@
       🌐 www.enmrlogistics.com
     </div>
   </div>
+
 </body>
 </html>
