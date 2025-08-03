@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | ENMR Logistics</title>
+  <title>Thank You | ENMR Logistics</title>
   <style>
     :root {
       --brand-brown: #4c3a14;
@@ -64,57 +64,27 @@
     }
 
     h1 {
-      font-size: 2.25rem;
-      margin-bottom: 40px;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-
-    .contact-info {
-      font-weight: bold;
+      font-size: 1.1rem;
       margin-bottom: 30px;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    label {
-      margin-top: 10px;
-      font-weight: bold;
-      text-align: left;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    input, textarea {
-      margin-top: 4px;
-      margin-bottom: 15px;
-      padding: 10px;
-      font-size: 1rem;
-      width: 100%;
-      max-width: 500px;
-      border: 2px solid black;
-      border-radius: 4px;
-    }
-
-    button {
+    .home-button {
       background-color: var(--button-brown);
       color: white;
-      font-weight: bold;
       border: 2px solid black;
-      padding: 10px 20px;
+      padding: 12px 24px;
       font-size: 1rem;
-      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    button:hover {
+    .home-button:hover {
       background-color: var(--button-hover);
     }
   </style>
@@ -134,30 +104,9 @@
   </div>
 
   <div class="container">
-    <h1>Contact</h1>
-    <p class="contact-info">
-      📍 Sarasota, Florida<br/>
-      📧 Email: <a href="mailto:support@enmrlogistics.com" style="color:white; text-decoration:underline;">support@enmrlogistics.com</a><br/>
-      🌐 www.enmrlogistics.com
-    </p>
-
-    <form action="https://formsubmit.co/support@enmrlogistics.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
-      <input type="hidden" name="_autoresponse" value="Thank you for contacting ENMR Logistics. We'll respond as soon as possible.">
-      <input type="hidden" name="_next" value="https://www.enmrlogistics.com/thank-you.html">
-
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required placeholder="Let us know how we can help."></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+    <h1>Thank You</h1>
+    <p>Your message has been received. We’ll get back to you as soon as possible.</p>
+    <a class="home-button" href="index.html">Return to Homepage</a>
   </div>
 
 </body>
