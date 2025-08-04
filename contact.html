@@ -2,104 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | ENMR Logistics</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
+    :root {
+      --brand-brown: #4c3a14;
+      --button-brown: #5c3d17;
+      --button-hover: #77532a;
+    }
+
     body {
-      background-color: #4c350f;
+      background-color: var(--brand-brown);
+      color: white;
       font-family: Arial, sans-serif;
-      color: #fff8e1;
       margin: 0;
       padding: 0;
       text-align: center;
     }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-      gap: 10px;
+
+    .navbar {
+      background-color: var(--brand-brown);
+      padding: 16px 0;
       border-bottom: 2px solid black;
     }
-    nav a {
-      background-color: #6b4713;
+
+    .nav-button {
+      background-color: var(--button-brown);
       color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      font-weight: bold;
       border: 2px solid black;
+      padding: 10px 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-size: 14px;
+      display: inline-block;
+      letter-spacing: 1px;
+      transition: background-color 0.2s ease;
     }
-    nav a:hover {
-      background-color: #8d5e1a;
+
+    .nav-button:hover {
+      background-color: var(--button-hover);
+      cursor: pointer;
     }
-    img.logo {
-      width: 300px;
-      margin: 30px auto 10px;
-      display: block;
+
+    .logo-wrapper {
+      margin-top: 40px;
+      margin-bottom: 30px;
     }
-    h1 {
-      margin-top: 0;
-    }
-    .contact-text {
-      margin: 10px auto 30px;
+
+    .top-logo {
+      width: 462px;
       max-width: 90%;
-      font-size: 16px;
+      height: auto;
     }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 500px;
-      margin: 0 auto 60px;
-      padding: 0 15px;
     }
-    input, textarea {
+
+    label {
+      margin-top: 6px;
+      margin-bottom: 2px;
+      font-weight: bold;
+      text-align: left;
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      font-size: 16px;
-      border: none;
+      max-width: 500px;
     }
+
+    input, textarea {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid black;
+      border-radius: 4px;
+    }
+
     button {
-      background-color: #6b4713;
+      background-color: var(--button-brown);
       color: white;
-      padding: 12px 25px;
       font-weight: bold;
       border: 2px solid black;
+      padding: 10px 20px;
+      font-size: 1rem;
       cursor: pointer;
       margin-top: 10px;
     }
+
     button:hover {
-      background-color: #8d5e1a;
+      background-color: var(--button-hover);
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="services.html">SERVICES</a>
-    <a href="quote.html">REQUEST A QUOTE</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
 
-  <img src="logo.png" alt="ENMR Logistics Logo" class="logo" />
-
-  <h1>Contact</h1>
-  <div class="contact-text">
-    Fill out our contact form below or email us directly at <br />
-    <strong>support@enmrlogistics.com</strong>
+  <div class="navbar">
+    <a href="index.html" class="nav-button">HOME</a>
+    <a href="about.html" class="nav-button">ABOUT</a>
+    <a href="services.html" class="nav-button">SERVICES</a>
+    <a href="quote.html" class="nav-button">REQUEST A QUOTE</a>
+    <a href="contact.html" class="nav-button">CONTACT</a>
   </div>
 
-  <form action="https://formsubmit.co/support@enmrlogistics.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="tel" name="phone" placeholder="Your Phone Number" />
-    <textarea name="message" placeholder="Let us know how we can help." rows="5" required></textarea>
-    <input type="hidden" name="_next" value="https://www.enmrlogistics.com/thank-you" />
-    <input type="hidden" name="_captcha" value="false" />
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="logo-wrapper">
+    <a href="index.html">
+      <img class="top-logo" src="logo_transparent_7_13.png" alt="ENMR Logistics Logo">
+    </a>
+  </div>
+
+  <div class="container">
+    <h1>Contact</h1>
+    <p>Fill out our contact form below or email us directly at <strong>support@enmrlogistics.com</strong></p>
+
+    <form action="https://formsubmit.co/support@enmrlogistics.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_autoresponse" value="Thank you for contacting ENMR Logistics. We'll respond as soon as possible.">
+      <input type="hidden" name="_next" value="https://www.enmrlogistics.com/thank-you-contact.html">
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Your Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Let us know how we can help."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
 </body>
 </html>
