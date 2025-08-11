@@ -18,6 +18,9 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .navbar {
@@ -61,28 +64,51 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 0 20px 40px;
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    h1, h2 {
+      text-align: center;
     }
 
     h1 {
       font-size: 2.25rem;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
 
     p {
       font-size: 1rem;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    ul {
-      display: table;
+    /* Bullets block centered while keeping left-aligned list text */
+    .bullets {
+      max-width: 800px;
+      margin: 0 auto 22px;
+    }
+    .bullets ul {
       margin: 0 auto 20px;
-      padding-left: 40px;
-      text-align: left;
+      padding-left: 20px;
+    }
+    .bullets li {
+      margin-bottom: 10px;
     }
 
-    li {
-      margin-bottom: 10px;
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 16px 12px;
+      border-top: 1px solid black;
+    }
+    footer a {
+      color: #e3c26a;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    footer a:hover {
+      color: #fff4bf;
     }
   </style>
 </head>
@@ -96,30 +122,60 @@
     <a href="contact.html" class="nav-button">CONTACT</a>
   </div>
 
-  <div class="logo-wrapper">
+  <div class="logo-wrapper" style="text-align:center;">
     <img class="top-logo" src="logo_transparent_7_13.png" alt="ENMR Logo">
   </div>
 
   <div class="container">
     <h1>Services</h1>
-    <p>
-      ENMR Logistics offers freight coordination services for businesses shipping internationally and within the United States. Our focus is on helping clients manage the logistics process clearly and efficiently — without needing to coordinate every piece themselves.
-    </p>
-    <p>
-      We are not a licensed freight forwarder or customs broker (yet), but we work closely with trusted professionals who are. Our role is to handle communication, scheduling, and follow-up between all parties involved in a shipment.
-    </p>
-    <p>We can assist with:</p>
-    <ul>
-      <li>Ocean import coordination through licensed partners</li>
-      <li>Coordination of air freight from pickup to delivery</li>
-      <li>Communication with U.S. customs brokers for ISF and entry filings</li>
-      <li>Final-mile trucking and drayage at major ports</li>
-      <li>Quoting across multiple lanes or transport modes</li>
-    </ul>
-    <p>
-      If you’re not sure whether we’re the right fit for your shipment, just ask. If we can’t help directly, we’ll point you in the right direction.
-    </p>
+
+    <p><strong>ENMR Logistics provides full-scope freight coordination and logistics management for businesses shipping internationally and within the United States.</strong> Whether by ocean, air, or ground, we streamline every stage of the transport process—from planning and documentation to scheduling and delivery—so you don’t have to juggle multiple vendors.</p>
+
+    <p>We act as a central command point, overseeing communication, timelines, and execution between shippers, carriers, customs brokers, and other logistics partners. From initial planning to final delivery, we keep every detail on track.</p>
+
+    <h2>We Can Assist With Nearly Any Logistics Need</h2>
+    <div class="bullets">
+      <ul>
+        <li><strong>Ocean import and export coordination</strong> (FCL and LCL)</li>
+        <li><strong>Air import and export coordination</strong> for urgent, high-value, or sensitive cargo</li>
+        <li>Domestic freight management, including LTL and FTL trucking</li>
+        <li>Port drayage and final-mile delivery solutions</li>
+        <li>Coordination with U.S. customs brokers for ISF filings, entry summaries, and clearances</li>
+        <li>Warehousing, storage, and distribution planning</li>
+        <li>Project cargo and oversized equipment moves</li>
+        <li>Multi-leg, multi-modal transport planning</li>
+        <li>Rate comparison and negotiation across carriers and transport modes</li>
+        <li>Vendor, supplier, and consignee communication management</li>
+        <li>Scheduling and monitoring of shipments from pickup to delivery</li>
+      </ul>
+    </div>
+
+    <p>If you’re not sure whether we’re the right fit for your shipment, just ask. If we can’t help directly, we’ll point you in the right direction.</p>
   </div>
 
+  <!-- Footer with popup behavior -->
+  <footer>
+    © 2025 ENMR Logistics LLC |
+    <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
+    <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
+  </footer>
+
+  <script>
+    function openLegalPopup(url) {
+      window.open(
+        url,
+        'enmrLegal',
+        'width=920,height=700,scrollbars=yes,resizable=yes'
+      );
+      return false;
+    }
+  </script>
+
+  <noscript>
+    <div style="text-align:center; padding:8px 0;">
+      <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> |
+      <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+    </div>
+  </noscript>
 </body>
 </html>

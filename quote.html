@@ -107,6 +107,21 @@
     button:hover {
       background-color: var(--button-hover);
     }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 16px 12px;
+      border-top: 1px solid black;
+    }
+    footer a {
+      color: #e3c26a;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    footer a:hover {
+      color: #fff4bf;
+    }
   </style>
 </head>
 <body>
@@ -162,5 +177,30 @@
     </form>
   </div>
 
+  <!-- Footer with popup behavior -->
+  <footer>
+    © 2025 ENMR Logistics LLC |
+    <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
+    <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
+  </footer>
+
+  <script>
+    // Opens Terms/Privacy in a 920×700 popup window (reuses the same window)
+    function openLegalPopup(url) {
+      window.open(
+        url,
+        'enmrLegal',
+        'width=920,height=700,scrollbars=yes,resizable=yes'
+      );
+      return false; // prevent normal navigation
+    }
+  </script>
+
+  <noscript>
+    <div style="text-align:center; padding:8px 0;">
+      <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> |
+      <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+    </div>
+  </noscript>
 </body>
 </html>
