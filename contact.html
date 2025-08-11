@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -174,13 +174,13 @@
 
   <!-- Footer with popup behavior -->
   <footer>
-    © 2025 ENMR Logistics LLC |
+    Â© 2025 ENMR Logistics LLC |
     <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
     <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
   </footer>
 
   <script>
-    // Opens Terms/Privacy in a 920×700 popup window (reuses the same window)
+    // Opens Terms/Privacy in a 920Ã—700 popup window (reuses the same window)
     function openLegalPopup(url) {
       window.open(
         url,
@@ -197,5 +197,27 @@
       <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
     </div>
   </noscript>
+<!-- ENMR legal footer START -->
+<footer style="text-align:center; padding:16px 12px; border-top:1px solid black;">
+  © 2025 ENMR Logistics LLC |
+  <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
+  <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
+</footer>
+
+<script>
+  function openLegalPopup(url) {
+    window.open(url,'enmrLegal','width=920,height=700,scrollbars=yes,resizable=yes');
+    return false;
+  }
+</script>
+
+<noscript>
+  <div style="text-align:center; padding:8px 0;">
+    <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> |
+    <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+  </div>
+</noscript>
+<!-- ENMR legal footer END -->
 </body>
 </html>
+
