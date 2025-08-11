@@ -6,7 +6,7 @@ $end   = '<!-- ENMR legal footer END -->'
 $footerBlock = @'
 <!-- ENMR legal footer START -->
 <footer style="text-align:center; padding:16px 12px; border-top:1px solid black;">
-  © 2025 ENMR Logistics LLC |
+  &copy; 2025 ENMR Logistics LLC |
   <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
   <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
 </footer>
@@ -32,14 +32,18 @@ function Inject-Footer($path) {
   if ($path -match '(?i)(^|[\\/])(terms|privacy)\.html$') { return } # skip legal pages
 
   $html = Get-Content $path -Raw
+
   if ($html -match [regex]::Escape($start)) {
     $pattern = '(?s)<!-- ENMR legal footer START -->.*?<!-- ENMR legal footer END -->'
     $html = [regex]::Replace($html, $pattern, [System.Text.RegularExpressions.MatchEvaluator]{ param($m) $footerBlock })
-  } elseif ($html -match '</body>') {
+  }
+  elseif ($html -match '</body>') {
     $html = $html -replace '</body>', "$footerBlock`r`n</body>"
-  } else {
+  }
+  else {
     $html = $html + "`r`n$footerBlock"
   }
+
   Set-Content -Path $path -Value $html -Encoding utf8
   Write-Host "Injected/updated footer in $path"
 }
