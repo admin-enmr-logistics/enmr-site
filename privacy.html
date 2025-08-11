@@ -7,12 +7,32 @@
   <meta name="robots" content="noindex" />
   <style>
     :root{
-      --bg:#4a360b; --bg2:#3c2b09; --text:#f5f0e6; --muted:#dccfb8;
-      --link:#e3c26a; --link-hover:#fff4bf; --border:#5e4612;
-      --radius:14px; --shadow:0 10px 28px rgba(0,0,0,.35);
+      --brand-brown:#4c3a14;
+      --text:#f5f0e6; 
+      --muted:#dccfb8;
+      --link:#e3c26a; 
+      --link-hover:#fff4bf;
+      --border:rgba(0,0,0,.25);
+      --radius:14px; 
+      --shadow:0 10px 28px rgba(0,0,0,.35);
     }
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:20px}
-    .wrap{max-width:980px;margin:0 auto;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--brand-brown);
+      color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      padding:20px;
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      background:var(--brand-brown);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
     .brand{text-align:center;margin:4px 0 6px}
     .brand img{max-width:220px;height:auto}
     .close-box{text-align:center;margin:10px 0}
@@ -32,7 +52,7 @@
 </head>
 <body>
   <main class="wrap" role="main">
-    <!-- LOGO (local path) -->
+    <!-- LOGO -->
     <div class="brand">
       <img src="logo_transparent_7_13.png" alt="ENMR Logistics LLC Logo" />
     </div>
@@ -47,7 +67,7 @@
 
     <section id="1-intro">
       <h2>1. Introduction</h2>
-      <p>ENMR Logistics LLC ("ENMR," "we," "us," or "our") respects your privacy. This Policy explains how we collect, use, share, and protect information when you use our website (the "Site") or engage our services.</p>
+      <p>ENMR Logistics LLC (“ENMR,” “we,” “us,” or “our”) respects your privacy. This Policy explains how we collect, use, share, and protect information when you use our website (the “Site”) or engage our services.</p>
     </section>
 
     <section id="2-collect">
@@ -118,7 +138,7 @@
     </section>
 
     <section id="10-children">
-      <h2>10. Children's Privacy</h2>
+      <h2>10. Children’s Privacy</h2>
       <p>Our services are not directed to children under 18, and we do not knowingly collect personal information from children.</p>
     </section>
 
@@ -134,6 +154,10 @@
         Email: <a href="mailto:admin@enmrlogistics.com">admin@enmrlogistics.com</a><br />
         Website: <a href="https://www.enmrlogistics.com" target="_blank" rel="noopener">www.enmrlogistics.com</a>
       </address>
+      <p style="text-align:center;">
+        By using this site, you agree to these 
+        <a href="terms.html" target="_self">Terms &amp; Conditions</a> and our Privacy Policy.
+      </p>
     </section>
 
     <div class="end">
@@ -142,5 +166,3 @@
   </main>
 </body>
 </html>
-
-
