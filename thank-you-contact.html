@@ -5,88 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You | ENMR Logistics</title>
   <style>
-    :root {
-      --brand-brown: #4c3a14;
-      --button-brown: #5c3d17;
-      --button-hover: #77532a;
-    }
-
-    body {
-      background-color: var(--brand-brown);
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    .navbar {
-      background-color: var(--brand-brown);
-      padding: 16px 0;
-      border-bottom: 2px solid black;
-    }
-
-    .nav-button {
-      background-color: var(--button-brown);
-      color: white;
-      border: 2px solid black;
-      padding: 10px 20px;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Arial Black', Gadget, sans-serif;
-      font-size: 14px;
-      display: inline-block;
-      letter-spacing: 1px;
-      transition: background-color 0.2s ease;
-    }
-
-    .nav-button:hover {
-      background-color: var(--button-hover);
-      cursor: pointer;
-    }
-
-    .logo-wrapper {
-      margin-top: 50px;
-      margin-bottom: 40px;
-    }
-
-    .top-logo {
-      width: 462px;
-      max-width: 90%;
-      height: auto;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-
-    .home-button {
-      background-color: var(--button-brown);
-      color: white;
-      border: 2px solid black;
-      padding: 12px 24px;
-      font-size: 1rem;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .home-button:hover {
-      background-color: var(--button-hover);
-    }
+    :root { --brand-brown:#4c3a14; --button-brown:#5c3d17; --button-hover:#77532a; }
+    body { background-color:var(--brand-brown); color:#fff; font-family:Arial, sans-serif; margin:0; padding:0; text-align:center; }
+    .navbar { background-color:var(--brand-brown); padding:16px 0; border-bottom:2px solid #000; }
+    .nav-button { background-color:var(--button-brown); color:#fff; border:2px solid #000; padding:10px 20px; margin:0 10px; text-decoration:none; font-weight:bold; font-family:'Arial Black', Gadget, sans-serif; font-size:14px; display:inline-block; letter-spacing:1px; transition:background-color .2s ease; }
+    .nav-button:hover { background-color:var(--button-hover); cursor:pointer; }
+    .logo-wrapper { margin-top:50px; margin-bottom:40px; }
+    .top-logo { width:462px; max-width:90%; height:auto; }
+    .container { max-width:800px; margin:0 auto; padding:0 20px 40px; }
+    h1 { font-size:2.5rem; margin-bottom:20px; }
+    p { font-size:1.1rem; margin-bottom:30px; }
+    .home-button { background-color:var(--button-brown); color:#fff; border:2px solid #000; padding:12px 24px; font-size:1rem; font-weight:bold; text-decoration:none; display:inline-block; }
+    .home-button:hover { background-color:var(--button-hover); }
   </style>
 </head>
 <body>
@@ -105,33 +35,30 @@
 
   <div class="container">
     <h1>Thank You</h1>
-    <p>Your message has been received. We"™ll get back to you as soon as possible.</p>
+    <p>Your message has been received. We'll get back to you as soon as possible.</p>
     <a class="home-button" href="index.html">Return to Homepage</a>
   </div>
 
-<!-- ENMR legal footer START -->
-<footer style="text-align:center; padding:16px 12px; border-top:1px solid black;">
-  &copy; 2025 ENMR Logistics LLC |
-  <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
-  <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
-</footer>
+  <!-- ENMR legal footer START -->
+  <footer style="text-align:center; padding:16px 12px; border-top:1px solid black;">
+    &copy; 2025 ENMR Logistics LLC |
+    <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
+    <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
+  </footer>
 
-<script>
-  function openLegalPopup(url) {
-    window.open(url,'enmrLegal','width=920,height=700,scrollbars=yes,resizable=yes');
-    return false;
-  }
-</script>
+  <script>
+    function openLegalPopup(url) {
+      window.open(url,'enmrLegal','width=920,height=700,scrollbars=yes,resizable=yes');
+      return false;
+    }
+  </script>
 
-<noscript>
-  <div style="text-align:center; padding:8px 0;">
-    <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> |
-    <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-  </div>
-</noscript>
-<!-- ENMR legal footer END -->
+  <noscript>
+    <div style="text-align:center; padding:8px 0;">
+      <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> |
+      <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+    </div>
+  </noscript>
+  <!-- ENMR legal footer END -->
 </body>
 </html>
-
-
-
