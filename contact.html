@@ -6,140 +6,57 @@
   <title>Contact | ENMR Logistics</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
-    :root {
-      --brand-brown: #4c3a14;
-      --button-brown: #5c3d17;
-      --button-hover: #77532a;
-    }
+    :root { --brand-brown:#4c3a14; --button-brown:#5c3d17; --button-hover:#77532a; }
 
-    body {
-      background-color: var(--brand-brown);
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+    body { background-color: var(--brand-brown); color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
 
-    .navbar {
-      background-color: var(--brand-brown);
-      padding: 16px 0;
-      border-bottom: 2px solid black;
-    }
+    .navbar { background-color: var(--brand-brown); padding: 16px 0; border-bottom: 2px solid #000; }
 
     .nav-button {
-      background-color: var(--button-brown);
-      color: white;
-      border: 2px solid black;
-      padding: 10px 20px;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Arial Black', Gadget, sans-serif;
-      font-size: 14px;
-      display: inline-block;
-      letter-spacing: 1px;
-      transition: background-color 0.2s ease;
+      background-color: var(--button-brown); color: #fff; border: 2px solid #000;
+      padding: 10px 20px; margin: 0 10px; text-decoration: none; font-weight: bold;
+      font-family: 'Arial Black', Gadget, sans-serif; font-size: 14px; display: inline-block;
+      letter-spacing: 1px; transition: background-color .02s;
     }
+    /* Early-2000s feel: no hover lighten, only on active (mouse down) */
+    .nav-button:hover  { background-color: var(--button-brown); cursor: pointer; }
+    .nav-button:active { background-color: var(--button-hover); }
 
-    .nav-button:hover {
-      background-color: var(--button-hover);
-      cursor: pointer;
-    }
+    .logo-wrapper { margin: 50px 0 40px; }
+    .top-logo { width: 462px; max-width: 90%; height: auto; }
 
-    /* normalized spacing to match other pages */
-    .logo-wrapper {
-      margin-top: 50px;
-      margin-bottom: 40px;
-    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px 40px; }
 
-    .top-logo {
-      width: 462px;
-      max-width: 90%;
-      height: auto;
-    }
+    h1 { font-size: 2.25rem; margin-bottom: 25px; }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-    }
+    p  { font-size: 1rem; margin-bottom: 20px; }
 
-    h1 {
-      font-size: 2.25rem;
-      margin-bottom: 25px;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    form { display: flex; flex-direction: column; align-items: center; }
 
     label {
-      margin-top: 6px;
-      margin-bottom: 2px;
-      font-weight: bold;
-      text-align: left;
-      width: 100%;
-      max-width: 500px;
+      margin-top: 6px; margin-bottom: 2px; font-weight: bold; text-align: left;
+      width: 100%; max-width: 500px;
     }
 
     input, textarea {
-      margin-bottom: 10px;
-      padding: 8px;
-      font-size: 0.95rem;
-      width: 100%;
-      max-width: 500px;
-      border: 2px solid black;
-      border-radius: 4px;
+      margin-bottom: 10px; padding: 8px; font-size: .95rem; width: 100%; max-width: 500px;
+      border: 2px solid #000; border-radius: 4px;
     }
 
     button {
-      background-color: var(--button-brown);
-      color: white;
-      font-weight: bold;
-      border: 2px solid black;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 10px;
+      background-color: var(--button-brown); color: #fff; font-weight: bold;
+      border: 2px solid #000; padding: 10px 20px; font-size: 1rem; cursor: pointer; margin-top: 10px;
     }
-
-    button:hover {
-      background-color: var(--button-hover);
-    }
+    button:hover  { background-color: var(--button-brown); }
+    button:active { background-color: var(--button-hover); }
 
     /* Footer styles */
-    footer {
-      text-align: center;
-      padding: 16px 12px;
-      border-top: 1px solid black;
-    }
-    /* Keep links gold whether visited or not */
-    footer a:link,
-    footer a:visited {
-      color: #e3c26a;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-    footer a:hover {
-      color: #fff4bf;
-    }
+    footer { text-align: center; padding: 16px 12px; border-top: 1px solid #000; }
+    footer a,
+    footer a:visited,
+    footer a:active { color: #e3c26a; text-decoration: underline; font-weight: bold; }
+    footer a:hover   { color: #fff4bf; }
   </style>
-<!-- ENMR nav click CSS OVERRIDE START -->
-<style id="nav-click-override">
-  /* Keep pointer on hover, but NO color change on hover */
-  .nav-button:hover { background-color: var(--button-brown) !important; cursor: pointer; }
-  /* Show lighter brown ONLY while the mouse is pressed */
-  .nav-button:active { background-color: var(--button-hover) !important; }
-</style>
-<!-- ENMR nav click CSS OVERRIDE END -->
 </head>
 <body>
 
@@ -152,14 +69,14 @@
   </div>
 
   <div class="logo-wrapper">
-    <a href="index.html">
-      <img class="top-logo" src="logo_transparent_7_13.png" alt="ENMR Logistics Logo">
-    </a>
+    <a href="index.html"><img class="top-logo" src="logo_transparent_7_13.png" alt="ENMR Logistics Logo"></a>
   </div>
 
   <div class="container">
     <h1>Contact</h1>
-    <p>Fill out our contact form below or email us directly at <strong>support@enmrlogistics.com</strong></p>
+    <p>Fill out our contact form below or email us directly at
+      <strong><a href="mailto:support@enmrlogistics.com">support@enmrlogistics.com</a></strong>
+    </p>
 
     <form action="https://formsubmit.co/support@enmrlogistics.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
@@ -196,116 +113,57 @@
       return false;
     }
   </script>
-
-  <noscript>
-    <div style="text-align:center; padding:8px 0;">
-      <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> |
-      <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-    </div>
-  </noscript>
   <!-- ENMR legal footer END -->
-<!-- ENMR nav click AUDIO+JS START -->
-<audio id="navClickSound" preload="auto">
-  <source src="mouse-click-290204.mp3" type="audio/mpeg">
-</audio>
-<script>
+
+  <!-- CLICK-SOUND (v2) START -->
+  <audio id="navClickAudio" preload="auto" src="mouse-click-290204.mp3"></audio>
+
+  <style>
+    #soundToggle {
+      position: fixed; top: 12px; right: 12px; width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: #5c3d17; color: #ffffff; border: 2px solid #000000;
+      border-radius: 10px; box-shadow: 0 0 0 3px rgba(0,0,0,0.25) inset;
+      cursor: pointer; z-index: 2147483647;
+    }
+    #soundToggle:active { background: #77532a; }
+  </style>
+
+  <script>
   (function () {
-    var audio = document.getElementById('navClickSound');
-    if (!audio) return;
-    var buttons = document.querySelectorAll('.navbar .nav-button');
-    buttons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        try {
-          audio.currentTime = 0;
-          audio.play().catch(function(){});
-        } catch (e) {}
-      });
-    });
+    const VOL = 0.35, KEY = 'enmrMuted';
+    const audio = document.getElementById('navClickAudio');
+
+    function ensureToggle(){
+      let btn = document.getElementById('soundToggle');
+      if(!btn){
+        btn = document.createElement('button');
+        btn.id = 'soundToggle';
+        document.body.appendChild(btn);
+        btn.addEventListener('click', ()=>{
+          const m = localStorage.getItem(KEY)==='1';
+          localStorage.setItem(KEY, m?'0':'1');
+          renderIcon();
+        });
+      }
+      renderIcon();
+      function renderIcon(){
+        const m = localStorage.getItem(KEY)==='1';
+        btn.title = m ? 'Enable click sound' : 'Mute click sound';
+        btn.setAttribute('aria-label', btn.title);
+        btn.textContent = m ? '🔇' : '🔊';
+      }
+    }
+
+    function bindClicks(){
+      if(!audio) return; audio.volume = VOL;
+      const play = ()=>{ if(localStorage.getItem(KEY)==='1') return; try{ audio.currentTime=0; audio.play(); }catch(e){} };
+      document.querySelectorAll('.nav-button').forEach(el=>el.addEventListener('mousedown', play, {passive:true}));
+    }
+
+    window.addEventListener('load', ()=>{ ensureToggle(); bindClicks(); });
   })();
-</script>
-<!-- ENMR nav click AUDIO+JS END -->
-<!-- NAV SOUND START -->
-<button id="soundToggle" class="sound-toggle" aria-label="Toggle navigation click sound" title="Toggle sound">
-  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-    <!-- speaker -->
-    <path d="M3 10v4h4l5 4V6l-5 4H3z" fill="currentColor"></path>
-    <!-- X when muted -->
-    <path id="muteX" d="M16 9l5 5m0-5l-5 5" stroke="currentColor" stroke-width="2" fill="none" style="display:none"></path>
-  </svg>
-</button>
-
-<audio id="navClickAudio" preload="auto">
-  <source src="mouse-click-290204.mp3" type="audio/mpeg">
-</audio>
-
-<style>
-  .sound-toggle{
-    position:fixed; right:10px; top:10px; z-index:1000;
-    background:var(--button-brown); color:#fff; border:2px solid #000;
-    width:36px; height:36px; border-radius:6px;
-    display:flex; align-items:center; justify-content:center; cursor:pointer;
-  }
-  .sound-toggle:hover{ background:var(--button-hover); }
-  .sound-toggle.muted{ opacity:0.7; }
-</style>
-
-<script>
-(function(){
-  var audio = document.getElementById('navClickAudio');
-  if(!audio){
-    audio = document.createElement('audio');
-    audio.id = 'navClickAudio';
-    audio.preload = 'auto';
-    var s = document.createElement('source');
-    s.src = 'mouse-click-290204.mp3'; s.type = 'audio/mpeg';
-    audio.appendChild(s);
-    document.body.appendChild(audio);
-  }
-
-  // ðŸ”‰ Set your preferred loudness here (0.0 - 1.0)
-  audio.volume = 0.5;
-
-  var btn = document.getElementById('soundToggle');
-  if(!btn){
-    btn = document.createElement('button');
-    btn.id = 'soundToggle';
-    btn.className = 'sound-toggle';
-    btn.setAttribute('aria-label','Toggle navigation click sound');
-    btn.title = 'Toggle sound';
-    btn.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 10v4h4l5 4V6l-5 4H3z" fill="currentColor"></path><path id="muteX" d="M16 9l5 5m0-5l-5 5" stroke="currentColor" stroke-width="2" fill="none" style="display:none"></path></svg>';
-    document.body.appendChild(btn);
-  }
-
-  function updateIcon(){
-    var x = btn.querySelector('#muteX');
-    if(x) x.style.display = audio.muted ? 'block' : 'none';
-    btn.classList.toggle('muted', audio.muted);
-    btn.setAttribute('aria-pressed', (!audio.muted).toString());
-  }
-
-  // Persist user preference
-  var stored = localStorage.getItem('muteNav') === '1';
-  audio.muted = stored;
-  updateIcon();
-
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-    audio.muted = !audio.muted;
-    localStorage.setItem('muteNav', audio.muted ? '1' : '0');
-    updateIcon();
-  });
-
-  // Play only for top nav buttons
-  document.querySelectorAll('.nav-button').forEach(function(a){
-    a.addEventListener('click', function(){
-      if(audio.muted) return;
-      try { audio.currentTime = 0; audio.play(); } catch(e){}
-    }, {capture:true});
-  });
-})();
-</script>
-<!-- NAV SOUND END -->
+  </script>
+  <!-- CLICK-SOUND (v2) END -->
 </body>
 </html>
-
-
