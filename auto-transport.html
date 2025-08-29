@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Auto Transport (Domestic & International) | ENMR Logistics</title>
-  <meta name="description" content="Door-to-door domestic auto transport and international vehicle shipping with ENMR Logistics — open/enclosed carriers, RoRo, and container service." />
+  <meta name="description" content="Door-to-door domestic auto transport and international vehicle shipping with ENMR Logistics â€” open/enclosed carriers, RoRo, and container service." />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     :root { --brand-brown:#4c3a14; --button-brown:#5c3d17; --button-hover:#77532a; }
@@ -33,13 +33,21 @@
     .faq h2 { text-align:center; margin-top:10px; }
     .faq p { text-align:center; margin:10px 0 20px; }
 
-    /* Footer styles — force yellow for link & visited */
+    /* Footer styles â€” force yellow for link & visited */
     footer { text-align:center; padding:16px 12px; border-top:1px solid #000; }
     footer a:link,
     footer a:visited { color:#e3c26a; text-decoration:underline; font-weight:bold; }
     footer a:hover,
     footer a:focus { color:#fff4bf; }
   </style>
+<!-- ENMR nav click CSS OVERRIDE START -->
+<style id="nav-click-override">
+  /* Keep pointer on hover, but NO color change on hover */
+  .nav-button:hover { background-color: var(--button-brown) !important; cursor: pointer; }
+  /* Show lighter brown ONLY while the mouse is pressed */
+  .nav-button:active { background-color: var(--button-hover) !important; }
+</style>
+<!-- ENMR nav click CSS OVERRIDE END -->
 </head>
 <body>
 
@@ -56,7 +64,7 @@
   </div>
 
   <div class="container">
-    <h1>Auto Transport — Domestic & International <span class="badge">RECENTLY UPDATED</span></h1>
+    <h1>Auto Transport â€” Domestic & International <span class="badge">RECENTLY UPDATED</span></h1>
     <p>
       ENMR Logistics coordinates safe, efficient vehicle shipping across the U.S. and worldwide.
       For domestic moves, we partner with a vetted U.S. auto-transport broker network. Internationally, we arrange
@@ -65,7 +73,7 @@
 
     <h2>Domestic Auto Transport</h2>
     <ul>
-      <li><strong>Open or enclosed carriers</strong> — choose enclosed for exotics, classics, or weather-sensitive vehicles.</li>
+      <li><strong>Open or enclosed carriers</strong> â€” choose enclosed for exotics, classics, or weather-sensitive vehicles.</li>
       <li><strong>Door-to-door pickup &amp; delivery</strong> where access allows (meeting points arranged if needed).</li>
       <li><strong>Operable &amp; inoperable vehicles</strong> (winch-capable carriers available).</li>
       <li><strong>Coverage</strong> across the lower 48 states, with options for AK/HI via port.</li>
@@ -74,10 +82,10 @@
 
     <h2>International Vehicle Shipping</h2>
     <ul>
-      <li><strong>RoRo</strong> — vehicles driven on/off dedicated RoRo vessels (often the most cost-effective).</li>
-      <li><strong>Container</strong> — 20'/40' single-vehicle or consolidated loading for added protection.</li>
-      <li><strong>Port delivery</strong> — we can coordinate domestic pickup to the load port.</li>
-      <li><strong>Documentation &amp; compliance</strong> — title/BOS, U.S. export filing, and destination customs coordination with our partners.</li>
+      <li><strong>RoRo</strong> â€” vehicles driven on/off dedicated RoRo vessels (often the most cost-effective).</li>
+      <li><strong>Container</strong> â€” 20'/40' single-vehicle or consolidated loading for added protection.</li>
+      <li><strong>Port delivery</strong> â€” we can coordinate domestic pickup to the load port.</li>
+      <li><strong>Documentation &amp; compliance</strong> â€” title/BOS, U.S. export filing, and destination customs coordination with our partners.</li>
       <li><strong>Marine cargo insurance</strong> available upon request.</li>
     </ul>
 
@@ -105,15 +113,15 @@
       <h2>FAQs</h2>
 
       <h2>How long does it take?</h2>
-      <p>Domestic coast-to-coast runs are typically 7–10 days in transit after pickup; regional moves can be 1–4 days.
-        International timing depends on vessel schedules — we’ll provide current sailings.</p>
+      <p>Domestic coast-to-coast runs are typically 7â€“10 days in transit after pickup; regional moves can be 1â€“4 days.
+        International timing depends on vessel schedules â€” weâ€™ll provide current sailings.</p>
 
       <h2>Can I ship a non-running car?</h2>
-      <p>Yes. We’ll arrange a winch-capable carrier domestically, or container service internationally.</p>
+      <p>Yes. Weâ€™ll arrange a winch-capable carrier domestically, or container service internationally.</p>
 
       <h2>Can I place personal items in the car?</h2>
       <p>Domestic carriers often allow a small amount below the window line (weight limits apply).
-        International rules vary; we’ll advise based on route and method.</p>
+        International rules vary; weâ€™ll advise based on route and method.</p>
     </div>
   </div>
 
@@ -138,5 +146,26 @@
     </div>
   </noscript>
   <!-- ENMR legal footer END -->
+<!-- ENMR nav click AUDIO+JS START -->
+<audio id="navClickSound" preload="auto">
+  <source src="mouse-click-290204.mp3" type="audio/mpeg">
+</audio>
+<script>
+  (function () {
+    var audio = document.getElementById('navClickSound');
+    if (!audio) return;
+    var buttons = document.querySelectorAll('.navbar .nav-button');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        try {
+          audio.currentTime = 0;
+          audio.play().catch(function(){});
+        } catch (e) {}
+      });
+    });
+  })();
+</script>
+<!-- ENMR nav click AUDIO+JS END -->
 </body>
 </html>
+
