@@ -47,9 +47,10 @@
       cursor: pointer;
     }
 
+    /* normalized spacing to match other pages */
     .logo-wrapper {
-      margin-top: 40px;
-      margin-bottom: 30px;
+      margin-top: 50px;
+      margin-bottom: 40px;
     }
 
     .top-logo {
@@ -113,6 +114,21 @@
     button:hover {
       background-color: var(--button-hover);
     }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 16px 12px;
+      border-top: 1px solid black;
+    }
+    footer a {
+      color: #e3c26a;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    footer a:hover {
+      color: #fff4bf;
+    }
   </style>
 </head>
 <body>
@@ -136,24 +152,19 @@
     <p>Fill out our contact form below or email us directly at <strong>support@enmrlogistics.com</strong></p>
 
     <form action="https://formsubmit.co/support@enmrlogistics.com" method="POST">
-      <!-- FormSubmit configuration -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
       <input type="hidden" name="_autoresponse" value="Thank you for contacting ENMR Logistics. We'll respond as soon as possible.">
       <input type="hidden" name="_next" value="https://www.enmrlogistics.com/thank-you-contact.html">
-      <input type="hidden" name="_subject" value="New Contact Form Submission">
-
-      <!-- Honeypot (helps reduce spam bots) -->
-      <input type="text" name="_honey" style="display:none">
 
       <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" autocomplete="name" required>
+      <input type="text" id="name" name="name" required />
 
       <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" autocomplete="email" required>
+      <input type="email" id="email" name="email" required />
 
       <label for="phone">Your Phone Number</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel">
+      <input type="tel" id="phone" name="phone" />
 
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="5" required placeholder="Let us know how we can help."></textarea>
@@ -163,16 +174,15 @@
   </div>
 
   <!-- ENMR legal footer START -->
-  <footer style="text-align:center; padding:16px 12px; border-top:1px solid black;">
+  <footer>
     &copy; 2025 ENMR Logistics LLC |
     <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
     <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
   </footer>
 
   <script>
-    // Opens Terms/Privacy in a 920x700 popup window (reuses the same window)
     function openLegalPopup(url) {
-      window.open(url, 'enmrLegal', 'width=920,height=700,scrollbars=yes,resizable=yes');
+      window.open(url,'enmrLegal','width=920,height=700,scrollbars=yes,resizable=yes');
       return false;
     }
   </script>
@@ -184,6 +194,5 @@
     </div>
   </noscript>
   <!-- ENMR legal footer END -->
-
 </body>
 </html>

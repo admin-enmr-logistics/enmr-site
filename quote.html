@@ -4,124 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Request a Quote | ENMR Logistics</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
-    :root {
-      --brand-brown: #4c3a14;
-      --button-brown: #5c3d17;
-      --button-hover: #77532a;
-    }
+    :root { --brand-brown:#4c3a14; --button-brown:#5c3d17; --button-hover:#77532a; }
 
-    body {
-      background-color: var(--brand-brown);
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+    body { background-color:var(--brand-brown); color:#fff; font-family:Arial,sans-serif; margin:0; padding:0; text-align:center; }
+    .navbar { background:var(--brand-brown); padding:16px 0; border-bottom:2px solid #000; }
+    .nav-button { background:var(--button-brown); color:#fff; border:2px solid #000; padding:10px 20px; margin:0 10px; text-decoration:none; font-weight:bold; font-family:'Arial Black', Gadget, sans-serif; font-size:14px; display:inline-block; letter-spacing:1px; transition:background-color .2s; }
+    .nav-button:hover { background:var(--button-hover); cursor:pointer; }
 
-    .navbar {
-      background-color: var(--brand-brown);
-      padding: 16px 0;
-      border-bottom: 2px solid black;
-    }
+    /* normalized spacing to match other pages */
+    .logo-wrapper { margin-top:50px; margin-bottom:40px; }
+    .top-logo { width:462px; max-width:90%; height:auto; }
 
-    .nav-button {
-      background-color: var(--button-brown);
-      color: white;
-      border: 2px solid black;
-      padding: 10px 20px;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Arial Black', Gadget, sans-serif;
-      font-size: 14px;
-      display: inline-block;
-      letter-spacing: 1px;
-      transition: background-color 0.2s ease;
-    }
+    .container { max-width:860px; margin:0 auto; padding:0 20px 40px; }
+    h1 { font-size:2.25rem; margin:0 0 20px; }
+    p  { font-size:1rem; margin-bottom:18px; }
 
-    .nav-button:hover {
-      background-color: var(--button-hover);
-      cursor: pointer;
-    }
-
-    .logo-wrapper {
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
-
-    .top-logo {
-      width: 462px;
-      max-width: 90%;
-      height: auto;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px 20px;
-    }
-
-    h1 {
-      font-size: 2.25rem;
-      margin-bottom: 25px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    label {
-      margin-top: 6px;
-      margin-bottom: 2px;
-      font-weight: bold;
-      text-align: left;
-      width: 100%;
-      max-width: 500px;
-    }
-
+    form { display:flex; flex-direction:column; align-items:center; }
+    label { margin-top:6px; margin-bottom:2px; font-weight:bold; text-align:left; width:100%; max-width:560px; }
     input, textarea, select {
-      margin-bottom: 10px;
-      padding: 8px;
-      font-size: 0.95rem;
-      width: 100%;
-      max-width: 500px;
-      border: 2px solid black;
-      border-radius: 4px;
+      margin-bottom:10px; padding:8px; font-size:.95rem;
+      width:100%; max-width:560px; border:2px solid #000; border-radius:4px;
     }
 
-    button {
-      background-color: var(--button-brown);
-      color: white;
-      font-weight: bold;
-      border: 2px solid black;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 10px;
-    }
+    button { background:var(--button-brown); color:#fff; border:2px solid #000; padding:10px 22px; font-size:1rem; font-weight:bold; cursor:pointer; margin-top:10px; }
+    button:hover { background:var(--button-hover); }
 
-    button:hover {
-      background-color: var(--button-hover);
-    }
-
-    /* Footer styles */
-    footer {
-      text-align: center;
-      padding: 16px 12px;
-      border-top: 1px solid black;
-    }
-    footer a {
-      color: #e3c26a;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-    footer a:hover {
-      color: #fff4bf;
-    }
+    footer { text-align:center; padding:16px 12px; border-top:1px solid #000; }
+    footer a { color:#e3c26a; text-decoration:underline; font-weight:bold; }
+    footer a:hover { color:#fff4bf; }
   </style>
 </head>
 <body>
@@ -140,55 +52,71 @@
 
   <div class="container">
     <h1>Request a Quote</h1>
+    <p>Tell us a few details and we’ll come back with options and pricing.</p>
+
     <form action="https://formsubmit.co/support@enmrlogistics.com" method="POST">
+      <!-- FormSubmit options -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
-      <input type="hidden" name="_autoresponse" value="Thank you for your submission. We'll respond shortly.">
+      <input type="hidden" name="_subject" value="New Quote Request — ENMR Logistics">
+      <input type="hidden" name="_autoresponse" value="Thanks for your quote request. We'll reach out shortly.">
       <input type="hidden" name="_next" value="https://www.enmrlogistics.com/thank-you.html">
 
-      <label for="name">Name or Company</label>
-      <input type="text" id="name" name="name" required />
+      <label for="name">Your Name</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="company">Company (optional)</label>
+      <input id="company" name="company" type="text">
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+      <input id="email" name="email" type="email" required>
 
-      <label for="origin">Origin (City, Country)</label>
-      <input type="text" id="origin" name="origin" required />
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="tel">
 
-      <label for="destination">Destination (City, Country)</label>
-      <input type="text" id="destination" name="destination" required />
+      <label for="origin">Origin (city, state/country)</label>
+      <input id="origin" name="origin" type="text" required>
 
-      <label for="mode">Preferred Mode</label>
-      <select id="mode" name="mode">
-        <option value="">Select</option>
-        <option value="Ocean">Ocean</option>
-        <option value="Air">Air</option>
-        <option value="Ground">Ground</option>
-        <option value="Not sure">Not sure</option>
+      <label for="destination">Destination (city, state/country)</label>
+      <input id="destination" name="destination" type="text" required>
+
+      <label for="mode">Mode</label>
+      <select id="mode" name="mode" required>
+        <option value="" selected disabled>Choose one…</option>
+        <option>Ocean</option>
+        <option>Air</option>
+        <option>Road / Rail</option>
+        <option>Auto Transport</option>
+        <option>Multimodal</option>
       </select>
 
-      <label for="goods">Type of Goods</label>
-      <input type="text" id="goods" name="goods" />
+      <label for="cargo">Cargo Description</label>
+      <textarea id="cargo" name="cargo" rows="4" placeholder="What are we moving?" required></textarea>
 
-      <label for="details">Additional Details</label>
-      <textarea id="details" name="details" rows="4" placeholder="Tell us anything else we should know about your shipment."></textarea>
+      <label for="dims">Dimensions / Weight (if known)</label>
+      <input id="dims" name="dimensions_weight" type="text" placeholder="e.g., 48x40x60 in, 900 lb">
+
+      <label for="timing">Desired Timing</label>
+      <input id="timing" name="timing" type="text" placeholder="e.g., Ready next week; flexible on delivery">
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Anything else we should know?"></textarea>
 
       <button type="submit">Submit Quote Request</button>
     </form>
   </div>
 
-  <!-- Footer with popup behavior -->
-  
+  <!-- ENMR legal footer START -->
+  <footer>
+    &copy; 2025 ENMR Logistics LLC |
+    <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
+    <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
+  </footer>
 
   <script>
-    // Opens Terms/Privacy in a 920Ã—700 popup window (reuses the same window)
     function openLegalPopup(url) {
-      window.open(
-        url,
-        'enmrLegal',
-        'width=920,height=700,scrollbars=yes,resizable=yes'
-      );
-      return false; // prevent normal navigation
+      window.open(url,'enmrLegal','width=920,height=700,scrollbars=yes,resizable=yes');
+      return false;
     }
   </script>
 
@@ -198,29 +126,6 @@
       <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
     </div>
   </noscript>
-<!-- ENMR legal footer START -->
-<footer style="text-align:center; padding:16px 12px; border-top:1px solid black;">
-  &copy; 2025 ENMR Logistics LLC |
-  <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
-  <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
-</footer>
-
-<script>
-  function openLegalPopup(url) {
-    window.open(url,'enmrLegal','width=920,height=700,scrollbars=yes,resizable=yes');
-    return false;
-  }
-</script>
-
-<noscript>
-  <div style="text-align:center; padding:8px 0;">
-    <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> |
-    <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-  </div>
-</noscript>
-<!-- ENMR legal footer END -->
+  <!-- ENMR legal footer END -->
 </body>
 </html>
-
-
-
