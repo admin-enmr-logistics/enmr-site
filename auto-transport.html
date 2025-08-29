@@ -20,7 +20,6 @@
     .container { max-width:900px; margin:0 auto; padding:0 20px 50px; text-align:left; }
     h1 { text-align:center; font-size:2.4rem; margin:0 0 16px; }
     h2 { font-size:1.4rem; margin:28px 0 8px; }
-    h3 { font-size:1.15rem; margin:20px 0 8px; text-align:center; }
     p, li { font-size:1rem; line-height:1.6; }
     ul { margin:8px 0 18px 20px; }
     .badge { display:inline-block; margin-left:8px; padding:2px 8px; border:1px solid #000; background:var(--button-brown); border-radius:6px; font-size:.8rem; font-weight:bold; }
@@ -29,16 +28,17 @@
     .btn { background:var(--button-brown); color:#fff; border:2px solid #000; padding:12px 20px; font-weight:bold; text-decoration:none; display:inline-block; margin:6px 8px; }
     .btn:hover { background:var(--button-hover); }
 
-    /* FAQ block */
-    .faq { 
-      margin:28px 0 10px; 
-      padding:18px; 
-      border:2px solid #000; 
-      border-radius:8px; 
-      background:#3e2f11;
-    }
-    .faq h2 { text-align:center; margin-top:0; }
-    .faq p { text-align:center; margin:0 0 16px; } /* <-- centers the answers */
+    /* FAQ box + centered answers */
+    .faq { margin:34px 0 10px; padding:18px 18px 8px; border:1px solid #000; border-radius:10px; background:rgba(0,0,0,.1); }
+    .faq h2 { text-align:center; margin-top:10px; }
+    .faq p { text-align:center; margin:10px 0 20px; }
+
+    /* Footer styles — force yellow for link & visited */
+    footer { text-align:center; padding:16px 12px; border-top:1px solid #000; }
+    footer a:link,
+    footer a:visited { color:#e3c26a; text-decoration:underline; font-weight:bold; }
+    footer a:hover,
+    footer a:focus { color:#fff4bf; }
   </style>
 </head>
 <body>
@@ -66,8 +66,8 @@
     <h2>Domestic Auto Transport</h2>
     <ul>
       <li><strong>Open or enclosed carriers</strong> — choose enclosed for exotics, classics, or weather-sensitive vehicles.</li>
-      <li><strong>Door-to-door pickup & delivery</strong> where access allows (meeting points arranged if needed).</li>
-      <li><strong>Operable & inoperable vehicles</strong> (winch-capable carriers available).</li>
+      <li><strong>Door-to-door pickup &amp; delivery</strong> where access allows (meeting points arranged if needed).</li>
+      <li><strong>Operable &amp; inoperable vehicles</strong> (winch-capable carriers available).</li>
       <li><strong>Coverage</strong> across the lower 48 states, with options for AK/HI via port.</li>
       <li><strong>Carrier vetting, scheduling, and tracking</strong> handled by ENMR as your single point of contact.</li>
     </ul>
@@ -77,7 +77,7 @@
       <li><strong>RoRo</strong> — vehicles driven on/off dedicated RoRo vessels (often the most cost-effective).</li>
       <li><strong>Container</strong> — 20'/40' single-vehicle or consolidated loading for added protection.</li>
       <li><strong>Port delivery</strong> — we can coordinate domestic pickup to the load port.</li>
-      <li><strong>Documentation & compliance</strong> — title/BOS, U.S. export filing, and destination customs coordination with our partners.</li>
+      <li><strong>Documentation &amp; compliance</strong> — title/BOS, U.S. export filing, and destination customs coordination with our partners.</li>
       <li><strong>Marine cargo insurance</strong> available upon request.</li>
     </ul>
 
@@ -92,40 +92,33 @@
     <ul>
       <li><strong>1. Request a quote:</strong> tell us origin/destination, vehicle(s), timing, and open vs. enclosed.</li>
       <li><strong>2. We coordinate pickup:</strong> we schedule the carrier and provide instructions for handoff.</li>
-      <li><strong>3. Transit & tracking:</strong> we keep you updated and manage the timeline.</li>
+      <li><strong>3. Transit &amp; tracking:</strong> we keep you updated and manage the timeline.</li>
       <li><strong>4. Delivery:</strong> final handoff and condition confirmation on arrival.</li>
     </ul>
-
-    <!-- FAQ block -->
-    <div class="faq">
-      <h2>FAQs</h2>
-
-      <h3>How long does it take?</h3>
-      <p>
-        Domestic coast-to-coast runs are typically 7&ndash;10 days in transit after pickup; regional moves can be 1&ndash;4 days.
-        International timing depends on vessel schedules &mdash; we&rsquo;ll provide current sailings.
-      </p>
-
-      <h3>Can I ship a non-running car?</h3>
-      <p>
-        Yes. We&rsquo;ll arrange a winch-capable carrier domestically, or container service internationally.
-      </p>
-
-      <h3>Can I place personal items in the car?</h3>
-      <p>
-        Domestic carriers often allow a small amount below the window line (weight limits apply). International rules vary; we&rsquo;ll
-        advise based on route and method.
-      </p>
-    </div>
 
     <div class="cta">
       <a class="btn" href="quote.html">Request an Auto-Transport Quote</a>
       <a class="btn" href="contact.html">Ask a Question</a>
     </div>
+
+    <div class="faq">
+      <h2>FAQs</h2>
+
+      <h2>How long does it take?</h2>
+      <p>Domestic coast-to-coast runs are typically 7–10 days in transit after pickup; regional moves can be 1–4 days.
+        International timing depends on vessel schedules — we’ll provide current sailings.</p>
+
+      <h2>Can I ship a non-running car?</h2>
+      <p>Yes. We’ll arrange a winch-capable carrier domestically, or container service internationally.</p>
+
+      <h2>Can I place personal items in the car?</h2>
+      <p>Domestic carriers often allow a small amount below the window line (weight limits apply).
+        International rules vary; we’ll advise based on route and method.</p>
+    </div>
   </div>
 
   <!-- ENMR legal footer START -->
-  <footer style="text-align:center; padding:16px 12px; border-top:1px solid #000;">
+  <footer>
     &copy; 2025 ENMR Logistics LLC |
     <a href="terms.html" onclick="return openLegalPopup(this.href)" rel="noopener">Terms &amp; Conditions</a> |
     <a href="privacy.html" onclick="return openLegalPopup(this.href)" rel="noopener">Privacy Policy</a>
